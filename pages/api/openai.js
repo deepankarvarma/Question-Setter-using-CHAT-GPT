@@ -3,15 +3,15 @@ const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 export default async (req, res) => {
   // Promt values
-  const beforePromt = ``;
-  const afterPromt = ``;
+  const beforePromt = `Make ${req.body.nmcq} MCQs with answers from the paragraph`;
+  const afterPromt = `Questions Maker From Paragraph`;
   const breakPoint = `\n\n'''\n\n`;
-
+  console.log(beforePromt);
   // Construct the prompt
   let prompt = `${beforePromt} ${breakPoint} ${req.body.name} ${breakPoint} ${afterPromt}`;
 
   // Log promt
-  console.log(prompt);
+  // console.log(prompt);
 
   // Call OpenAI API
   const gptResponse = await openai.complete({
@@ -28,5 +28,4 @@ export default async (req, res) => {
 
   res.status(200).json({ text: `${gptResponse.data.choices[0].text}` });
 };
-// model: "text-davinci-002",
-// prompt: "Write a long form social media post based on this Content that will engage a reader into conversation, include a summary of the Content",
+

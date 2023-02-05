@@ -14,9 +14,10 @@ export default function Home() {
   // React Hooks
   const [data, setData] = useState({ text: "" });
   const [query, setQuery] = useState();
+  const [nmcq, setMCQ] = useState();
   const [search, setSearch] = useState();
   const [isLoading, setIsLoading] = useState(false);
-
+  
   // Fetch data from API
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +26,7 @@ export default function Home() {
         const res = await fetch(`/api/openai`, {
           body: JSON.stringify({
             name: search,
+            nmcq: nmcq
           }),
           headers: {
             "Content-Type": "application/json",
@@ -38,22 +40,28 @@ export default function Home() {
     };
 
     fetchData();
+
+    return ()=>{
+      setSearch("")
+    }
   }, [search]);
 
+  
   // What we want to render
   return (
     <Fragment>
       <Head>
-        <title>My Awesome GPT-3 App</title>
+        <title>Question Paper Setter Website</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="bg-gradient-to-r from-pink-100 to-blue-300 min-h-screen px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
         <main className="flex flex-col justify-center  max-w-3xl w-full align-center">
           <h1 className="text-4xl text-center font-extrabold text-slate-800 drop-shadow sm:text-5xl mb-1">
-            My Awesome GPT-3 App...
+            Question Paper Setter 
           </h1>
           <p className="block text-sm text-center font-medium text-gray-500">
-            Here you will write your awesome description
+            <br></br>
+            An amazing tool for teachers 
           </p>
 
           {/* Card & Input field  */}
@@ -63,8 +71,17 @@ export default function Home() {
               type="textarea"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Past your article here...."
-              defaultValue={"djuaslkdjh"}
+              placeholder="Paste the paragraph here"
+              
+            />
+            <br></br>
+            <textarea
+              className="max-w shadow-sm      min-h-64  block w-full focus:ring-pink-500 focus:border-pink-500 sm:text-sm border border-gray-300 rounded-md"
+              type="textarea"
+              value={nmcq}
+              onChange={(event) => setMCQ(event.target.value)}
+              placeholder="Enter the number of MCQ questions"
+              
             />
 
             {/* Button to that calls API */}
@@ -73,7 +90,7 @@ export default function Home() {
               type="button"
               onClick={() => setSearch(query)}
             >
-              Create
+              Frame Questions
             </button>
 
             <div className="mt-5 p-5 text-sm text-gray-900 border-t-2 border-slate-200 ">
