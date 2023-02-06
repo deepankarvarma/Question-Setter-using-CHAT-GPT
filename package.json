@@ -2,6 +2,7 @@
     "name": "gpt-3-app",
     "version": "0.0.1",
     "private": false,
+    
     "scripts": {
         "dev": "next dev",
         "build": "next build",
