@@ -1,3 +1,5 @@
+const mySecret = process.env['OPENAI_API_KEY'];
+console.log(mySecret);
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect, Fragment } from "react";
@@ -63,7 +65,7 @@ export default function Home() {
             <br></br>
             An amazing tool for teachers 
           </p>
-
+    
           {/* Card & Input field  */}
           <div className="text-center relative backdrop-filter overflow-hidden mb-6 max-w w-full rounded-md  ring-1 ring-black ring-opacity-0 p-4 ">
             <textarea

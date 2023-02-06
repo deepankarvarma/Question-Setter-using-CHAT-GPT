@@ -15,6 +15,7 @@ export default async (req, res) => {
 
   // Call OpenAI API
   const gptResponse = await openai.complete({
+
     engine: "text-davinci-002",
     prompt: `${prompt}`,
     maxTokens: 1500,
