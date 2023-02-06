@@ -1,5 +1,5 @@
-const mySecret = process.env['OPENAI_API_KEY'];
-console.log(mySecret);
+// const mySecret = process.env['OPENAI_API_KEY'];
+// console.log(mySecret);
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect, Fragment } from "react";
