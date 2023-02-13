@@ -25,7 +25,8 @@ If you don't have a setup on your computer that allow to run code locally, then 
 
 Simply paste a paragraph in the first textarea and then enter the number of MCQ questions you need in the second textarea.Finally use the Frame Questions button to generate questions. The maximum questions generated at a time is 10 (Limitation from CHAT GPT). 
 
-##Working Screenshot
+## Working Screenshot
+
 <img src="https://media.licdn.com/dms/image/D4D2CAQFbebGKw3x9Vw/comment-image-shrink_8192_1280/0/1675929395216?e=1676926800&v=beta&t=hoIgugGWAeqQnjt4crQgbDT4t-GtakoVEVrtlKPmRE8"></img>
 
 
