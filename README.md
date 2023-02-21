@@ -25,7 +25,7 @@ Simply paste a paragraph in the first textarea and then enter the number of MCQ 
 
 ## Working Screenshot
 
-<img src="https://media.licdn.com/dms/image/D4D2CAQFbebGKw3x9Vw/comment-image-shrink_8192_1280/0/1675929395216?e=1676926800&v=beta&t=hoIgugGWAeqQnjt4crQgbDT4t-GtakoVEVrtlKPmRE8"></img>
+<img src="https://miro.medium.com/v2/resize:fit:1100/0*-U316Ioh1PHQ42xC"></img>
 
 
 ## Tips
