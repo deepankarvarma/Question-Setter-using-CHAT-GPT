@@ -17,13 +17,18 @@ Made By- Deepankar Varma
 ## For help related to API connection visit [OpenAI](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)
 
 
-## Tips
-
-If you don't have a setup on your computer that allow to run code locally, then use https://replit.com/
 
 ## How to use
 
 Simply paste a paragraph in the first textarea and then enter the number of MCQ questions you need in the second textarea.Finally use the Frame Questions button to generate questions. The maximum questions generated at a time is 10 (Limitation from CHAT GPT). 
 
 
+## Working Screenshot
+
+<img src="https://miro.medium.com/v2/resize:fit:1100/0*-U316Ioh1PHQ42xC"></img>
+
+
+## Tips
+
+If you don't have a setup on your computer that allow to run code locally, then use https://replit.com/
 
